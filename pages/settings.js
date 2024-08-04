@@ -115,6 +115,12 @@ export default function Settings() {
               width: 70%;
             }
           }
+          @media (min-width: 100px) {
+            main {
+              margin: 4rem auto 2rem;
+              width: 60%;
+            }
+          }
         `}</style>
         <style jsx>{`
           label {
