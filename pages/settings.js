@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ColorSwatch from "../components/ColorSwatch";
 import SwitchToggle from "../components/SwitchToggle";
 import { useThemeContext } from "../context/ThemeContext";
+import Image from "next/image";
 
 export default function Settings() {
   const { theme, setTheme } = useThemeContext();

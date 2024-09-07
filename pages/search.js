@@ -6,6 +6,7 @@ import MainLayout from '../components/MainLayout';
 import ListMessage from '../components/ListMessage';
 import { useQueryContext } from '../context/QueryContext';
 import SearchListItem from '../components/SearchListItem';
+import Image from 'next/image';
 
 export default function search() {
   const [query, setQuery] = useQueryContext();
@@ -59,6 +60,13 @@ export default function search() {
               return <SearchListItem {...meaning} key={meaning.offset} />;
             })}
           </SearchList>
+        )}
+        {!data && (
+          <section style={{justifyContent:'center',alignSelf:'center'}}>
+          <a href="https://daramet.com/zabannian.ir">
+          <Image src={require('../public/donation.png')} alt='حمایت مالی از زبانیان' />
+          </a>
+        </section>
         )}
       </MainLayout>
     </>
