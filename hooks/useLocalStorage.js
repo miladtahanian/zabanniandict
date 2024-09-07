@@ -17,7 +17,7 @@ const isJSON = (str) => {
 export default function useLocalStorage(key, initialState, reducer) {
   // useLayoutEffect and server rendering
   // https://gist.github.com/gaearon/e7d97cdf38a2907924ea12e4ebdf3c85
-  useLayoutEffect = typeof window === 'undefined' ? () => {} : useLayoutEffect;
+  // useLayoutEffect = typeof window === 'undefined' ? () => {} : useLayoutEffect;
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
