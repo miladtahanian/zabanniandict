@@ -10,6 +10,7 @@ import SimilarSection from '../components/SimilarSection';
 import { useSenseContext } from '../context/SenseContext';
 import { useRecentContext } from '../context/RecentContext';
 import DefinitionSection from '../components/DefinitionSection';
+import Link from 'next/link';
 
 export default function define({ sense, error }) {
   const { theme } = useThemeContext();
@@ -53,6 +54,13 @@ export default function define({ sense, error }) {
         <RelatedSection ptrs={sense.ptrs} />
 
         <XRefSection lemma={sense.lemma} />
+
+        <div className="border-t border-amber-800 mt-8 pt-4 text-center text-sm text-gray-300">
+          تمامی حقوق این وب اپلیکیشن مربوط به زبانیان می باشد. 1404 - طراحی و توسعه توسط{" "}
+          <Link href="https://github.com/miladtahanian" className="text-white hover:text-amber-300">
+            میلاد طحانیان
+          </Link>
+        </div>
 
         <style jsx>{`
           main {

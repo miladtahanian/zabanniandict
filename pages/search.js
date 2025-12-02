@@ -7,6 +7,7 @@ import ListMessage from '../components/ListMessage';
 import { useQueryContext } from '../context/QueryContext';
 import SearchListItem from '../components/SearchListItem';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function search() {
   const [query, setQuery] = useQueryContext();
@@ -62,12 +63,18 @@ export default function search() {
           </SearchList>
         )}
         {!data && (
-          <section style={{justifyContent:'center',alignSelf:'center'}}>
-          <a href="https://daramet.com/zabannian.ir">
-          <Image src={require('../public/donation.png')} alt='حمایت مالی از زبانیان' />
-          </a>
-        </section>
+          <section style={{ justifyContent: 'center', alignSelf: 'center' }}>
+            <a href="https://daramet.com/zabannian.ir">
+              <Image src={require('../public/donation.png')} alt='حمایت مالی از زبانیان' />
+            </a>
+          </section>
         )}
+        <div className="border-t border-amber-800 mt-8 pt-4 text-center text-sm text-gray-300">
+          تمامی حقوق این وب اپلیکیشن مربوط به زبانیان می باشد. 1404 - طراحی و توسعه توسط{" "}
+          <Link href="https://github.com/miladtahanian" className="text-white hover:text-amber-300">
+            میلاد طحانیان
+          </Link>
+        </div>
       </MainLayout>
     </>
   );

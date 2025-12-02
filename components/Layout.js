@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import dynamicSVGURL from '../utils/dynamicSVGURL';
 import { useThemeContext } from '../context/ThemeContext';
+import Link from 'next/link';
 
 export default function Layout({ children }) {
   const { theme } = useThemeContext();
